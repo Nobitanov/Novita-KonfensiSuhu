@@ -1,0 +1,70 @@
+print ("pilihlah suhu yang akan di konfensikan dengan cara pilih satuan suhu yang sesuai:")
+print ("C : Celcius")
+print ("F : Fahrenheit")
+print ("K : Kelvin")
+print ("R : Reamur")
+konfensi = input ("pilih konfensi yang akan dihitung, (ex : C = F)  :    " )
+
+if (konfensi == "C = F"):
+    C = int (input("masukkan suhu Celcius =  "))
+    F = ((C * float(9/5) ) + 32)
+    print ("Celcius ke Fahrenheit : ", F, "F")
+
+elif (konfensi == "C = K"):
+    C = int (input("masukkan suhu Celcius =  "))
+    K =  C * float (273.15) 
+    print ("Celcius => Kelvin:", K, "K")
+
+
+elif (konfensi == "C = R"):
+    C = int (input("masukkan suhu Celcius =  "))
+    R =  C * float (4/5)
+    print ("Celcius => Reamur :", R, "R")
+
+elif (konfensi == "F = C"):
+    F = int (input("masukkan suhu Fahrenheit =  "))
+    C = ((F - 32) * float(5/9))
+    print ("Fahrenheit => Celcius : ", C, "C")
+
+elif (konfensi == "F = K"):
+    F = int (input("masukkan suhu Fahrenheit =  "))
+    K = ((F - 32) * float(5/9) + float(273.15))
+    print ("Fahrenheit => Kelvin : ", K, "K")
+
+elif (konfensi == "F = Re"):
+    F = int (input("masukkan suhu Fahrenheit =  "))
+    R = ((F - 32) * float(5/9) + float(273.15))
+    print ("Fahrenheit => Kelvin : ", R, "R")
+
+elif (konfensi == "K = C"):
+    K = int (input("masukkan suhu Kelvin =  "))
+    C = K - float(273.15)
+    print ("Kelvin => Celcius : ", C, "C")
+
+elif (konfensi == "K = F"):
+    K = int (input("masukkan suhu Kelvin =  "))
+    F = (K - float(273.15)) * float(9/5) + 32
+    print ("Kelvin => Fahrenheit : ", F, "F")
+
+elif (konfensi == "K = R"):
+    K = int (input("masukkan suhu Kelvin =  "))
+    R = float(4/5)(K - 273)
+    print ("Kelvin => Reamur : ", R, "R")
+
+elif (konfensi == "R = C"):
+    R = int(input("masukkan suhu Reamur = "))
+    C = R / float(0.8)
+    print ("Reamur => Celcius : ", R, "R")
+
+elif (konfensi == "R = F"):
+    R = int(input("masukkan suhu Reamur = "))
+    F = ( R * float(2.25)) + 32
+    print ("Reamur => Fahrenheit : ", F, "F")
+
+elif (konfensi == "R = K"):
+    R = int(input("masukkan suhu Reamur = "))
+    K = (R / float(0.8)) + float(273.15)
+    print ("Reamur => Kelvin : ", K, "K")
+
+else :
+    print (" ANDA BELUM MENGINPUTKAN NILAI, TERIMAKASIH ^_^")
